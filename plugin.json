@@ -1,48 +1,20 @@
 {
   "version": "1.0.6",
-  "pluginName": "Chrome 小助手",
-  "description": "Chrome 书签搜索",
-  "author": "uTools官方",
-  "homepage": "https://u.tools",
+  "pluginName": "腾讯会议快开助手2024版",
+  "description": "腾讯会议快速识别会议号并进入会议",
+  "author": "simuhunluo",
+  "homepage": "https://github.com/simuhunluo/utools-quick-wemeet",
   "preload": "preload.js",
   "logo": "logo.png",
   "features": [
     {
-      "platform": [
-        "darwin",
-        "win32"
-      ],
-      "code": "incognito_mode",
-      "explain": "Chrome 隐身模式打开当前URL",
+      "code": "open_wemeet_room",
+      "explain": "进入腾讯会议房间",
       "cmds": [
         {
-          "type": "window",
-          "match": {
-            "app": ["Google Chrome.app", "chrome.exe"]
-          },
-          "label": "隐身模式打开"
-        }
-      ]
-    },
-    {
-      "code": "chrome_bookmarks",
-      "explain": "Chrome 书签搜索",
-      "cmds": [
-        "Chrome BookMarks",
-        "Chrome 书签"
-      ]
-    },
-    {
-      "platform": "darwin",
-      "code": "opened_tabs",
-      "explain": "列出所有 Chrome 窗口已打开的标签页",
-      "cmds": [
-        {
-          "type": "window",
-          "match": {
-            "app": "Google Chrome.app"
-          },
-          "label": "所有标签页"
+          "type": "regex",
+          "label": "腾讯会议快速进入",
+          "match": "/#?(?:腾讯会议：)?(\\d{3})[- ]?(\\d{3})[- ]?(\\d{3,4})/"
         }
       ]
     }
