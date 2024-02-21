@@ -5,7 +5,7 @@ window.exports = {
     mode: 'none',
     args: {
       enter: (param) => {
-        const regex = /#?(?:腾讯会议：)?(\d{3})[- ]?(\d{3})[- ]?(\d{3,4})/;
+        const regex = /#?(?:腾讯会议：)?(\d{3})[- ]?(\d{3,4})[- ]?(\d{3,4})/;
         const matchResult = param.payload.match(regex);
 
         if (matchResult) {
